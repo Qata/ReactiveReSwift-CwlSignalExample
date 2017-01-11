@@ -1,26 +1,64 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ub5-k4-MNK">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="idZ-U4-8C4">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ub5-k4-MNK" customClass="ViewController" customModule="ReactiveReSwift_ReactiveKitExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="iJV-cj-yyU"/>
+                        <viewControllerLayoutGuide type="bottom" id="qgy-7o-PE9"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="P79-hL-sjF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7S-na-WW3">
+                                <rect key="frame" x="174" y="307" width="28" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uom-Oh-CIs">
+                                <rect key="frame" x="120" y="388" width="30" height="30"/>
+                                <state key="normal" title="Up"/>
+                                <connections>
+                                    <action selector="upTouch:" destination="ub5-k4-MNK" eventType="touchUpInside" id="g64-Gd-Xam"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2Z-zd-cg3">
+                                <rect key="frame" x="222" y="388" width="39" height="30"/>
+                                <state key="normal" title="Down"/>
+                                <connections>
+                                    <action selector="downTouch:" destination="ub5-k4-MNK" eventType="touchUpInside" id="6jj-Hu-b0p"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="S7S-na-WW3" firstAttribute="centerY" secondItem="P79-hL-sjF" secondAttribute="centerY" id="3B6-8I-o4M"/>
+                            <constraint firstItem="Uom-Oh-CIs" firstAttribute="centerX" secondItem="P79-hL-sjF" secondAttribute="centerX" constant="-53" id="MgK-Od-VX0"/>
+                            <constraint firstItem="p2Z-zd-cg3" firstAttribute="top" secondItem="S7S-na-WW3" secondAttribute="bottom" constant="27" id="V0c-73-8Ge"/>
+                            <constraint firstItem="S7S-na-WW3" firstAttribute="centerX" secondItem="P79-hL-sjF" secondAttribute="centerX" id="kKm-vz-UXd"/>
+                            <constraint firstItem="p2Z-zd-cg3" firstAttribute="centerX" secondItem="P79-hL-sjF" secondAttribute="centerX" constant="54" id="otb-yQ-Yzo"/>
+                            <constraint firstItem="Uom-Oh-CIs" firstAttribute="top" secondItem="S7S-na-WW3" secondAttribute="bottom" constant="27" id="vIr-Yf-Pac"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="S7S-na-WW3" id="rdK-jb-Ofv"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QCU-Tq-F3f" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="74" y="127"/>
         </scene>
     </scenes>
 </document>
