@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        disposeBag += mainStore.observable.subscribe { [weak self] store in
+        disposeBag += mainStore.observable.deliveredOn(DispatchQueue.main).subscribe { [weak self] store in
             self?.counterLabel.text = String(store.counter)
         }
     }
